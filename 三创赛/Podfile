@@ -1,0 +1,11 @@
+target '三创赛' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 三创赛
+  pod 'AFNetworking','~> 3.2.1'
+  pod 'Masonry'
+  pod 'MJExtension'
+  pod 'SVProgressHUD'
+
+end
