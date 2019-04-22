@@ -12,19 +12,11 @@
 @end
 
 @implementation ZJNavigationController
-//+ (void)load {
-//    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
-//
-//    // 只要是通过模型设置,都是通过富文本设置
-//    // 设置导航条标题 => UINavigationBar
-//    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-//    attrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
-//    [navBar setTitleTextAttributes:attrs];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationBar setBarTintColor:[UIColor colorWithRed:80/255.0 green:186/255.0 blue:247/255.0 alpha:1.0]];
+//    [self.navigationBar setBarTintColor:[UIColor colorWithRed:80/255.0 green:186/255.0 blue:247/255.0 alpha:1.0]];
+    [self.navigationBar setBarTintColor:[UIColor colorWithRed:24/255.0 green:113/255.0 blue:245/255.0 alpha:1.0]];
 }
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
@@ -35,7 +27,6 @@
         backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     }
-    
     [super pushViewController:viewController animated:animated];
 
 }

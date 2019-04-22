@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SWULoginViewController.h"
+#import "ZJNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     SWULoginViewController * loginVc = [[SWULoginViewController alloc] init];
-    [self.window setRootViewController:loginVc];
+        ZJNavigationController * nav = [[ZJNavigationController alloc] initWithRootViewController:loginVc];
+    [self.window setRootViewController:nav];
     
     [self.window makeKeyAndVisible];
     return YES;

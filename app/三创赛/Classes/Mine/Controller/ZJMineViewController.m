@@ -13,6 +13,7 @@
 #import "ZJHeaderView.h"
 #import "ZJPublishJobsViewController.h"
 #import "SWULoginViewController.h"
+#import "ZJDelteUserViewController.h"
 
 
 @interface ZJMineViewController ()
@@ -69,7 +70,14 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     ZJHeaderView * view = [[ZJHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    UITapGestureRecognizer *tapGeture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeName:)];
+    [view addGestureRecognizer:tapGeture];
     return  view;
+}
+
+-(void)changeName:(UITapGestureRecognizer *)tap {
+    ZJDelteUserViewController * deleteVc = [[ZJDelteUserViewController alloc] init];
+    [self.navigationController pushViewController:deleteVc animated:YES];
 }
 
 #pragma mark ------ TableViewDelegate ------
@@ -94,7 +102,8 @@
             [userDefaults synchronize];
             //                退出登录，然后设置主页面为登录界面
             SWULoginViewController * loginVc = [[SWULoginViewController alloc] init];
-            [[UIApplication sharedApplication].keyWindow setRootViewController:loginVc];
+            ZJNavigationController * nav = [[ZJNavigationController alloc] initWithRootViewController:loginVc];
+            [[UIApplication sharedApplication].keyWindow setRootViewController:nav];
             return;
         }
     }];

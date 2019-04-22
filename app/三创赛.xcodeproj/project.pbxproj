@@ -39,11 +39,15 @@
 		BF47A742226420330015DDFD /* MCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF47A73E226420330015DDFD /* MCTabBar.m */; };
 		BF7ECEC3226C090100BBAEE6 /* ZJDetailInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEC2226C090100BBAEE6 /* ZJDetailInfoController.m */; };
 		BF7ECEC6226C171200BBAEE6 /* ZJProgressLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEC5226C171200BBAEE6 /* ZJProgressLineView.m */; };
-		BF7ECEDA226C5E7800BBAEE6 /* SWULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECECC226C5E7800BBAEE6 /* SWULoginViewController.m */; };
-		BF7ECEDD226C5E7800BBAEE6 /* SWULoginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECED4226C5E7800BBAEE6 /* SWULoginLabel.m */; };
-		BF7ECEDE226C5E7800BBAEE6 /* SWUTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECED6226C5E7800BBAEE6 /* SWUTextField.m */; };
 		BF7ECEE2226C5FEC00BBAEE6 /* UIButton+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEE1226C5FEC00BBAEE6 /* UIButton+Login.m */; };
 		BF7ECEE5226C607700BBAEE6 /* ZJLoginSuccessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEE4226C607700BBAEE6 /* ZJLoginSuccessModel.m */; };
+		BF7ECEF8226E069200BBAEE6 /* SWUForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEE9226E069200BBAEE6 /* SWUForgetPwdViewController.m */; };
+		BF7ECEF9226E069200BBAEE6 /* SWULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEEB226E069200BBAEE6 /* SWULoginViewController.m */; };
+		BF7ECEFA226E069200BBAEE6 /* SWURegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEED226E069200BBAEE6 /* SWURegisterViewController.m */; };
+		BF7ECEFC226E069200BBAEE6 /* SWULoginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEF3226E069200BBAEE6 /* SWULoginLabel.m */; };
+		BF7ECEFD226E069200BBAEE6 /* SWUTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEF5226E069200BBAEE6 /* SWUTextField.m */; };
+		BF7ECEFE226E069200BBAEE6 /* SWUVerificationCodeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECEF7226E069200BBAEE6 /* SWUVerificationCodeButton.m */; };
+		BF7ECF01226E1A3F00BBAEE6 /* ZJDelteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7ECF00226E1A3F00BBAEE6 /* ZJDelteUserViewController.m */; };
 		BFA37C0E226BF3B4007D9EF8 /* news.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA37C0D226BF3B4007D9EF8 /* news.plist */; };
 		BFA37C10226BF40C007D9EF8 /* jobs.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFA37C0F226BF40C007D9EF8 /* jobs.plist */; };
 		BFF10246225CC36C001BE0F6 /* ZJPublishJobsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF10245225CC36C001BE0F6 /* ZJPublishJobsViewController.m */; };
@@ -115,16 +119,24 @@
 		BF7ECEC2226C090100BBAEE6 /* ZJDetailInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDetailInfoController.m; sourceTree = "<group>"; };
 		BF7ECEC4226C171200BBAEE6 /* ZJProgressLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJProgressLineView.h; sourceTree = "<group>"; };
 		BF7ECEC5226C171200BBAEE6 /* ZJProgressLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJProgressLineView.m; sourceTree = "<group>"; };
-		BF7ECECB226C5E7800BBAEE6 /* SWULoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWULoginViewController.h; sourceTree = "<group>"; };
-		BF7ECECC226C5E7800BBAEE6 /* SWULoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWULoginViewController.m; sourceTree = "<group>"; };
-		BF7ECED3226C5E7800BBAEE6 /* SWULoginLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWULoginLabel.h; sourceTree = "<group>"; };
-		BF7ECED4226C5E7800BBAEE6 /* SWULoginLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWULoginLabel.m; sourceTree = "<group>"; };
-		BF7ECED5226C5E7800BBAEE6 /* SWUTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUTextField.h; sourceTree = "<group>"; };
-		BF7ECED6226C5E7800BBAEE6 /* SWUTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUTextField.m; sourceTree = "<group>"; };
 		BF7ECEE0226C5FEC00BBAEE6 /* UIButton+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Login.h"; sourceTree = "<group>"; };
 		BF7ECEE1226C5FEC00BBAEE6 /* UIButton+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Login.m"; sourceTree = "<group>"; };
 		BF7ECEE3226C607700BBAEE6 /* ZJLoginSuccessModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJLoginSuccessModel.h; sourceTree = "<group>"; };
 		BF7ECEE4226C607700BBAEE6 /* ZJLoginSuccessModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJLoginSuccessModel.m; sourceTree = "<group>"; };
+		BF7ECEE8226E069200BBAEE6 /* SWUForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUForgetPwdViewController.h; sourceTree = "<group>"; };
+		BF7ECEE9226E069200BBAEE6 /* SWUForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUForgetPwdViewController.m; sourceTree = "<group>"; };
+		BF7ECEEA226E069200BBAEE6 /* SWULoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWULoginViewController.h; sourceTree = "<group>"; };
+		BF7ECEEB226E069200BBAEE6 /* SWULoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWULoginViewController.m; sourceTree = "<group>"; };
+		BF7ECEEC226E069200BBAEE6 /* SWURegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWURegisterViewController.h; sourceTree = "<group>"; };
+		BF7ECEED226E069200BBAEE6 /* SWURegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWURegisterViewController.m; sourceTree = "<group>"; };
+		BF7ECEF2226E069200BBAEE6 /* SWULoginLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWULoginLabel.h; sourceTree = "<group>"; };
+		BF7ECEF3226E069200BBAEE6 /* SWULoginLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWULoginLabel.m; sourceTree = "<group>"; };
+		BF7ECEF4226E069200BBAEE6 /* SWUTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUTextField.h; sourceTree = "<group>"; };
+		BF7ECEF5226E069200BBAEE6 /* SWUTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUTextField.m; sourceTree = "<group>"; };
+		BF7ECEF6226E069200BBAEE6 /* SWUVerificationCodeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUVerificationCodeButton.h; sourceTree = "<group>"; };
+		BF7ECEF7226E069200BBAEE6 /* SWUVerificationCodeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUVerificationCodeButton.m; sourceTree = "<group>"; };
+		BF7ECEFF226E1A3F00BBAEE6 /* ZJDelteUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJDelteUserViewController.h; sourceTree = "<group>"; };
+		BF7ECF00226E1A3F00BBAEE6 /* ZJDelteUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJDelteUserViewController.m; sourceTree = "<group>"; };
 		BFA37C0D226BF3B4007D9EF8 /* news.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = news.plist; sourceTree = "<group>"; };
 		BFA37C0F226BF40C007D9EF8 /* jobs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = jobs.plist; sourceTree = "<group>"; };
 		BFF10244225CC36C001BE0F6 /* ZJPublishJobsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJPublishJobsViewController.h; sourceTree = "<group>"; };
@@ -147,7 +159,7 @@
 		BF04B58C224A489900ECB8E9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BF7ECEC7226C5E7800BBAEE6 /* Login */,
+				BF7ECEE6226E069200BBAEE6 /* Login */,
 				BF47A74322642CC50015DDFD /* Publish */,
 				BF04B58D224A489900ECB8E9 /* Home */,
 				BF04B591224A489900ECB8E9 /* Jobs */,
@@ -289,6 +301,8 @@
 			children = (
 				BF04B5AF224A491700ECB8E9 /* ZJMineViewController.h */,
 				BF04B5B0224A491700ECB8E9 /* ZJMineViewController.m */,
+				BF7ECEFF226E1A3F00BBAEE6 /* ZJDelteUserViewController.h */,
+				BF7ECF00226E1A3F00BBAEE6 /* ZJDelteUserViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -436,26 +450,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BF7ECEC7226C5E7800BBAEE6 /* Login */ = {
+		BF7ECEE6226E069200BBAEE6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				BF7ECEC8226C5E7800BBAEE6 /* Controller */,
-				BF7ECECF226C5E7800BBAEE6 /* Model */,
-				BF7ECED2226C5E7800BBAEE6 /* View */,
+				BF7ECEE7226E069200BBAEE6 /* Controller */,
+				BF7ECEEE226E069200BBAEE6 /* Model */,
+				BF7ECEF1226E069200BBAEE6 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		BF7ECEC8226C5E7800BBAEE6 /* Controller */ = {
+		BF7ECEE7226E069200BBAEE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BF7ECECB226C5E7800BBAEE6 /* SWULoginViewController.h */,
-				BF7ECECC226C5E7800BBAEE6 /* SWULoginViewController.m */,
+				BF7ECEE8226E069200BBAEE6 /* SWUForgetPwdViewController.h */,
+				BF7ECEE9226E069200BBAEE6 /* SWUForgetPwdViewController.m */,
+				BF7ECEEA226E069200BBAEE6 /* SWULoginViewController.h */,
+				BF7ECEEB226E069200BBAEE6 /* SWULoginViewController.m */,
+				BF7ECEEC226E069200BBAEE6 /* SWURegisterViewController.h */,
+				BF7ECEED226E069200BBAEE6 /* SWURegisterViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BF7ECECF226C5E7800BBAEE6 /* Model */ = {
+		BF7ECEEE226E069200BBAEE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BF7ECEE3226C607700BBAEE6 /* ZJLoginSuccessModel.h */,
@@ -464,13 +482,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BF7ECED2226C5E7800BBAEE6 /* View */ = {
+		BF7ECEF1226E069200BBAEE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BF7ECED3226C5E7800BBAEE6 /* SWULoginLabel.h */,
-				BF7ECED4226C5E7800BBAEE6 /* SWULoginLabel.m */,
-				BF7ECED5226C5E7800BBAEE6 /* SWUTextField.h */,
-				BF7ECED6226C5E7800BBAEE6 /* SWUTextField.m */,
+				BF7ECEF2226E069200BBAEE6 /* SWULoginLabel.h */,
+				BF7ECEF3226E069200BBAEE6 /* SWULoginLabel.m */,
+				BF7ECEF4226E069200BBAEE6 /* SWUTextField.h */,
+				BF7ECEF5226E069200BBAEE6 /* SWUTextField.m */,
+				BF7ECEF6226E069200BBAEE6 /* SWUVerificationCodeButton.h */,
+				BF7ECEF7226E069200BBAEE6 /* SWUVerificationCodeButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,13 +638,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF10246225CC36C001BE0F6 /* ZJPublishJobsViewController.m in Sources */,
+				BF7ECEF8226E069200BBAEE6 /* SWUForgetPwdViewController.m in Sources */,
 				BF04B6582250A1EA00ECB8E9 /* ZJJobsSearchViewController.m in Sources */,
-				BF7ECEDD226C5E7800BBAEE6 /* SWULoginLabel.m in Sources */,
 				BF04B619224B61AE00ECB8E9 /* ZJHomeHeaderView.m in Sources */,
 				BF04B64A2250592100ECB8E9 /* ZJHomeNewsCell.m in Sources */,
 				BF04B643224FADEC00ECB8E9 /* ZJJobsCell.m in Sources */,
 				BF04B5BA224A4B7600ECB8E9 /* ZJMineModel.m in Sources */,
-				BF7ECEDA226C5E7800BBAEE6 /* SWULoginViewController.m in Sources */,
 				BF04B5A8224A489900ECB8E9 /* ZJNavigationController.m in Sources */,
 				BF47A741226420330015DDFD /* MCTabBarController.m in Sources */,
 				BF04B65C2250AA3F00ECB8E9 /* ZJJobsSearchLabel.m in Sources */,
@@ -633,21 +652,26 @@
 				BF04B630224F90D200ECB8E9 /* ZJNewsModel.m in Sources */,
 				BF04B5B4224A4A4C00ECB8E9 /* ZJJobsViewController.m in Sources */,
 				BF04B5B1224A491700ECB8E9 /* ZJMineViewController.m in Sources */,
+				BF7ECEFD226E069200BBAEE6 /* SWUTextField.m in Sources */,
 				BF04B610224A4E9100ECB8E9 /* ZJNewsViewController.m in Sources */,
 				BF04B639224F930200ECB8E9 /* ZJNewsCell.m in Sources */,
+				BF7ECF01226E1A3F00BBAEE6 /* ZJDelteUserViewController.m in Sources */,
 				BF7ECEC3226C090100BBAEE6 /* ZJDetailInfoController.m in Sources */,
 				BF04B5A9224A489900ECB8E9 /* ZJTabBarController.m in Sources */,
 				BF47A742226420330015DDFD /* MCTabBar.m in Sources */,
 				BF7ECEE2226C5FEC00BBAEE6 /* UIButton+Login.m in Sources */,
 				BF04B64722504C1C00ECB8E9 /* ZJJobHeadView.m in Sources */,
 				BF7ECEE5226C607700BBAEE6 /* ZJLoginSuccessModel.m in Sources */,
+				BF7ECEF9226E069200BBAEE6 /* SWULoginViewController.m in Sources */,
 				BF04B5B7224A4B4A00ECB8E9 /* ZJMineTableViewCell.m in Sources */,
-				BF7ECEDE226C5E7800BBAEE6 /* SWUTextField.m in Sources */,
+				BF7ECEFA226E069200BBAEE6 /* SWURegisterViewController.m in Sources */,
+				BF7ECEFE226E069200BBAEE6 /* SWUVerificationCodeButton.m in Sources */,
 				BF04B613224A597C00ECB8E9 /* ZJJobsView.m in Sources */,
 				BF04B5E4224A4C5B00ECB8E9 /* ZJHeaderView.m in Sources */,
 				BF7ECEC6226C171200BBAEE6 /* ZJProgressLineView.m in Sources */,
 				BF04B5AE224A48E800ECB8E9 /* ZJMainViewController.m in Sources */,
 				BF04B5AB224A489900ECB8E9 /* main.m in Sources */,
+				BF7ECEFC226E069200BBAEE6 /* SWULoginLabel.m in Sources */,
 				BF04B5AA224A489900ECB8E9 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

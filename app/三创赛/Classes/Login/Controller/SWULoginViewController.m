@@ -8,15 +8,15 @@
 #import "SWULoginViewController.h"
 #import "SWUTextField.h"
 #import "Masonry.h"
+#import "UIButton+Login.h"
 #import "SVProgressHUD.h"
+#import "SWURegisterViewController.h"
+#import "SWUForgetPwdViewController.h"
 #import "Constants.h"
 #import "ZJTabBarController.h"
-#import "MJExtension.h"
-#import "UIButton+Login.h"
-#import "AFNetworking.h"
 #import "ZJLoginSuccessModel.h"
-
-
+#import "MJExtension.h"
+#import "AFNetworking.h"
 
 
 @interface SWULoginViewController ()<UITextFieldDelegate>
@@ -67,6 +67,7 @@
     
     //    添加textfield 快速注册和忘记密码按钮
     UIView * backView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(logImageView.frame)+170, SCREEN_WIDTH, 140)];
+    //    backView.backgroundColor = [UIColor redColor];
     [self.view addSubview:backView];
     self.userTextField = [SWUTextField SWUTextFieldWithFrame:CGRectMake(WEEK_SCROLLERVIEW_HEIGHT, 5, SCREEN_WIDTH-2*WEEK_SCROLLERVIEW_HEIGHT, WEEK_SCROLLERVIEW_HEIGHT) LeftView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login_account"]] Text:@"请输入账号" KeyBoardType:UIKeyboardTypeNumberPad];
     _userTextField.delegate = self;
@@ -76,6 +77,14 @@
     _pwdTextfield.userInteractionEnabled = NO;
     _pwdTextfield.secureTextEntry = YES;
     [backView addSubview:_pwdTextfield];
+    //    添加按钮
+    //    registerBtn
+    UIButton * registerBtn = [UIButton ButtonWithTitle:@"快速注册" Frame:CGRectMake(CGRectGetMinX(_pwdTextfield.frame), CGRectGetMaxY(_pwdTextfield.frame)+20, _pwdTextfield.frame.size.width*0.5, 25) Alignment:UIControlContentHorizontalAlignmentLeft titleColor:[UIColor blackColor]];
+    [registerBtn addTarget:self action:@selector(quickRegister) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:registerBtn];
+    UIButton * forgetPwdBtn = [UIButton ButtonWithTitle:@"忘记密码" Frame:CGRectMake(CGRectGetMaxX(registerBtn.frame), CGRectGetMaxY(_pwdTextfield.frame)+20, _pwdTextfield.frame.size.width*0.5, 25) Alignment:UIControlContentHorizontalAlignmentRight titleColor:[UIColor blackColor]];
+    [forgetPwdBtn addTarget:self action:@selector(forgetPwd) forControlEvents:UIControlEventTouchUpInside];
+    [backView addSubview:forgetPwdBtn];
     
     //    添加登录按钮
     _loginBtn = [UIButton ButtonWithTitle:@"登录" Frame:CGRectMake(CGRectGetMinX(_pwdTextfield.frame), CGRectGetMaxY(backView.frame)+35, _pwdTextfield.frame.size.width, 40) Alignment:UIControlContentHorizontalAlignmentCenter titleColor:[UIColor whiteColor]];
@@ -84,7 +93,16 @@
     [self.view addSubview:_loginBtn];
 }
 
-
+//快速注册
+-(void)quickRegister {
+    SWURegisterViewController * registerVc  = [[SWURegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerVc animated:YES];
+}
+//忘记密码
+-(void)forgetPwd {
+    SWUForgetPwdViewController * forgetPwdVc = [[SWUForgetPwdViewController alloc] init];
+    [self.navigationController pushViewController:forgetPwdVc animated:YES];
+}
 //登录
 -(void)login {
     if (_pwdTextfield.text.length <= 0 && _userTextField.text.length <= 0) {
@@ -95,7 +113,7 @@
         return ;
     }
     [SVProgressHUD showWithStatus:@"请稍后..."];
-//    登录请求
+    //    登录请求
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     
     NSDictionary * paraDic = @{
@@ -109,8 +127,9 @@
             [SVProgressHUD showErrorWithStatus:@"用户名或密码错误!"];
             return ;
         }
-
-        
+        [self.userDefaults setObject:self.userTextField.text forKey:@"phoneNumber"];
+        [self.userDefaults setObject:self.pwdTextfield.text forKey:@"password"];
+        [self.userDefaults synchronize];
         ZJTabBarController * tabVc = [[ZJTabBarController alloc] init];
         [[UIApplication sharedApplication].keyWindow setRootViewController:tabVc];
         

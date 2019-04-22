@@ -13,4 +13,7 @@
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define WEEK_SCROLLERVIEW_HEIGHT  40
 
+#define NAVA_MAXY (CGRectGetMaxY(self.navigationController.navigationBar.frame))
+
+
 #endif /* Constants_h */
