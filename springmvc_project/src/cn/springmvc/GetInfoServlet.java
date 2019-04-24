@@ -51,9 +51,7 @@ public class GetInfoServlet {
 		String phoneNumber = request.getParameter("phoneNumber");
 		String password = request.getParameter("password");
 		System.out.println("login");
-//		System.out.println(password);
 		boolean isPasswordTrue = new GetInfoServiceImpl().login(phoneNumber, password);
-		System.out.println(isPasswordTrue);
 		ListObject listObject = new ListObject();
 		if (isPasswordTrue) {
 			listObject.setItems(null);
@@ -66,13 +64,62 @@ public class GetInfoServlet {
 		listObject.setCode(StatusCode.CODE_ERROR);
 		listObject.setMsg("访问失败");
 		ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
-		
 	}
 	
+	@RequestMapping(value="addUser", method= RequestMethod.POST)
+	public void addUser(HttpServletRequest request,HttpServletResponse response) {
+		String phoneNumber = request.getParameter("phoneNumber");
+		String password = request.getParameter("password");
+		boolean isAddUserSuccess = new GetInfoServiceImpl().addUser(phoneNumber, password);
+		ListObject listObject = new ListObject();
+		if (isAddUserSuccess) {
+			listObject.setItems(null);
+			listObject.setCode(StatusCode.CODE_SUCCESS);
+			listObject.setMsg("访问成功");
+			ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+			return ;
+		}
+		listObject.setItems(null);
+		listObject.setCode(StatusCode.CODE_ERROR);
+		listObject.setMsg("访问失败");
+		ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+	}
+	@RequestMapping(value="changePassword", method= RequestMethod.POST)
+	public void changePassword(HttpServletRequest request,HttpServletResponse response) {
+		String phoneNumber = request.getParameter("phoneNumber");
+		String password = request.getParameter("password");
+		boolean isChangePasswordSuccess = new GetInfoServiceImpl().changePassword(phoneNumber, password);
+		ListObject listObject = new ListObject();
+		if (isChangePasswordSuccess) {
+			listObject.setItems(null);
+			listObject.setCode(StatusCode.CODE_SUCCESS);
+			listObject.setMsg("访问成功");
+			ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+			return ;
+		}
+		listObject.setItems(null);
+		listObject.setCode(StatusCode.CODE_ERROR);
+		listObject.setMsg("访问失败");
+		ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+	}
 	
+	@RequestMapping(value="deleteUser", method= RequestMethod.POST)
+	public void deleteUser(HttpServletRequest request,HttpServletResponse response) {
+		String phoneNumber = request.getParameter("phoneNumber");
+		String password = request.getParameter("password");
+		boolean isDeleteUserSuccess = new GetInfoServiceImpl().deleteUser(phoneNumber, password);
+		ListObject listObject = new ListObject();
+		if (isDeleteUserSuccess) {
+			listObject.setItems(null);
+			listObject.setCode(StatusCode.CODE_SUCCESS);
+			listObject.setMsg("访问成功");
+			ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+			return ;
+		}
+		listObject.setItems(null);
+		listObject.setCode(StatusCode.CODE_ERROR);
+		listObject.setMsg("访问失败");
+		ResponseUtils.renderJson(response, JackJsonUtils.toJson(listObject));
+	}
 	
-	
-	
-	
-
-}
+} 

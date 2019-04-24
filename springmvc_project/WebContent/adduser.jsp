@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="login" method="post">
+<form action="deleteUser" method="post">
 
 <p><input type="text" name="phoneNumber" placeholder="phoneNumber"/></p>
 <p><input type="text" name="password" placeholder="password"/></p>

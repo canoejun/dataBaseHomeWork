@@ -112,7 +112,63 @@ public class GetInfo {
 		}
 		return false;
 	}
+	public static boolean addUser(String _phoneNumber,String password) {
+		String sql = null;
+		DBHelper db1 = null;
+		int result = 0;
+		sql = "insert into users values('"+_phoneNumber+"','"+password+"')";
+		System.out.println(sql);
+		db1 = new DBHelper(sql);
+		try {
+			result = db1.pst.executeUpdate();
+			db1.close();//关系数据库连接
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // 
+		if (result != 0) {
+			return true; 
+		}
+		return false;
+	}
 	
+	public static boolean changePassword(String _phoneNumber,String password) {
+		String sql = null;
+		DBHelper db1 = null;
+		sql = "update users set password = '"+password+"' where phoneNumber =" + _phoneNumber;// sql
+		System.out.println(sql);
+		db1 = new DBHelper(sql);//创建DBHelper对象
+		int result = 0;//创建结果集对象
+		try {
+			result = db1.pst.executeUpdate();//正常来说，这个结果集只有一个对象
+			db1.close();//关系数据库连接
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // 
+		if (result == 1) {
+			return true; 
+		}
+		return false;
+	}
 	
-	
+	public static boolean deleteUser(String _phoneNumber,String password) {
+		String sql = null;
+		DBHelper db1 = null;
+		sql = "delete from users where phoneNumber =" + _phoneNumber;// sql
+		System.out.println(sql);
+		db1 = new DBHelper(sql);//创建DBHelper对象
+		int result = 0;//创建结果集对象
+		try {
+			result = db1.pst.executeUpdate();//正常来说，这个结果集只有一个对象
+			db1.close();//关系数据库连接
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} // 
+		if (result == 1) {
+			return true; 
+		}
+		return false;
+	}
 }

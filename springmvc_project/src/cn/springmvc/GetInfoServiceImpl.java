@@ -14,4 +14,14 @@ public class GetInfoServiceImpl implements GetInfoService{
 	public boolean login(String _phoneNumber,String password) {
 		return GetInfo.login(_phoneNumber, password);
 	}
+	
+	public boolean addUser(String _phoneNumber,String password) {
+		return GetInfo.addUser(_phoneNumber, password);
+	}
+	public boolean changePassword(String _phoneNumber,String password) {
+		return GetInfo.changePassword(_phoneNumber, password);
+	}
+	public boolean deleteUser(String _phoneNumber,String password) {
+		return GetInfo.deleteUser(_phoneNumber, password);
+	}
 }
